@@ -9,7 +9,7 @@
     <h1>Detail Pegawai</h1>
     <table border="1" cellpadding="8" cellsapcing="0">
         <tr>
-            <th>Nama Lnegkap</th>
+            <th>Nama Lengkap</th>
             <td>{{ $employee->nama_lengkap }}</td>
         </tr>
 
