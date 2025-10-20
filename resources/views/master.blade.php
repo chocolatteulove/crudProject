@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'App Pegawai')</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <header>
-        <h1>@yield('page-title', 'App Pegawai')</h1>
         <nav>
             <ul>
                 <li><a href="{{ url('/employee') }}">Employee</a></li>

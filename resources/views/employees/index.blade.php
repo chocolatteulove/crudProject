@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
+
     @extends('master')
     @section('title', 'Daftar Pegawai')
     @section('content')
-    <div class="container mt-5">
-        <h1 class="mb-4">Daftar Pegawai</h1>
-        <table border="1" cellpadding="5" cellspacing="0">
+    <div class="container">
+        <h2>Daftar Pegawai</h2>
+        <table>
             <thead>
                 <tr>
                     <th>Nama Lengkap</th>
@@ -50,5 +43,3 @@
         </table>
     </div>
     @endsection
-</body>
-</html>

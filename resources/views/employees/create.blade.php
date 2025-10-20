@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Form Input Pegawai</title>
 </head>
 <body>
-    <h1 class="mb-4">Form Pegawai</h1>
+    <div class="container">
+    <h1>Form Input Pegawai</h1>
+    <form method="POST" action="{{ route('employees.store') }}">
+        @csrf
+    <!-- Form fields here -->
     <form action="{{ route('employees.store') }}" method="POST">
         @csrf
         <table>
@@ -48,6 +53,24 @@
                         <option value="non-aktif">Non-Aktif</option>
                     </select>
                 </td>
+            
+            <tr>
+                <select name="department_id" required>
+                    <option value="">-- Pilih Departemen --</option>
+                    @foreach($departments as $dept)
+                        <option value="{{ $dept->id }}">{{ $dept->nama_departemen }}</option>
+                    @endforeach
+                </select>
+            </tr>
+
+            <tr>
+                <select name="position_id" required>
+                    <option value="">-- Pilih Jabatan --</option>
+                    @foreach($positions as $pos)
+                        <option value="{{ $pos->id }}">{{ $pos->nama_jabatan }}</option>
+                    @endforeach
+                </select>
+
             </tr>
 
             <tr>
@@ -57,5 +80,6 @@
             </tr>
         </table>
     </form>
+    </div>
 </body>
 </html>

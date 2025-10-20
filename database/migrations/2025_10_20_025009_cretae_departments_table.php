@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('employees', function (Blueprint $table) {
-            //
+        Schema::create('departments', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_departemen');
+            $table->timestamps();
         });
+
     }
 
     /**
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('employees', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };
